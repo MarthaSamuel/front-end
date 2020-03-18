@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>	
+<title>Martha's first website</title>
+<style>
+html{font-family:Arial;}
+body{padding:10px30px;}
+h1{font-size:1.8em;text-transform:uppercase;text-align:center;text-decoration:underline;color:white;background:black;padding:10px0px;}
+h2{font-size:1.2em;}
+nav{background:black;padding:5px;}
+nav ul{list-style:none}
+nav ul li{display:inline;margin-left:15px;font-weight:bold;}
+nav ul li a{color:white;}
+nav ul li a:visited{color:white;}
+nav ul li a:hover{color:orange;}
+a{text-decoration:none;color:blue;}
+a:visited{color;purple;}
+a:hover{color:orange;}
+.important{font-weight:bold;color:red;}
+span.important{font-weight:bold;color:red;}
+#textspan{border:1px solid black;}
+</style>	
+</head>	
+<body>
+<section>
+<h1>Martha's Website Tutorial</h1>
+<div>
+<h2>Making my first webpage</h2>
+<p>It is possible to make websites using these extremely simple tools. This is great news as it means everyone can learn to make websites.<p>	
+<p>This is my first practice webpage. For now we can only have a simple page but later we will make it more complex and interesting.</p>
+</div>
+<div>
+<h2>What have we learned so far?</h2>
+<p>   So far we have learned a few simple tags for placing text into a page</p>
+</div>
+<div>
+<h3>What will we learn next?</h3>
+<p>   In the next paragrahs we are going to learn how to make our webpage look more interesting. We will learn how to add images and links to our webpage.Relax! It's one step at a moment. Before then,let's talk about me.</p>
+</div>
+</section>
+<section>
+<h1>About Me</h1>
+<div>
+<h2>Martha Samuel</h2>
+<img src="me.jpg"title="A picture of me"alt="A picture of me"/>
+<p>I am a corp member currently following a course to learn all about HTML!</p>
+</div>
+</section>
+<section>
+<a href="Contact Us.html">Contact Us</a>
+</section>
+</body>	
+</html>
