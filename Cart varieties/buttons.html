@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Task Introduction Page</title>
+
+
+        <style>
+            /* we can use button{} for button without class*/
+            .subscribe-button {
+                background-color: rgb(214, 10, 10);
+                color: white;
+                border: none;
+                height: 35px;
+                width: 110px;
+                border-radius: 2px;
+                cursor: pointer;
+                margin-left:8px;
+                transition: opacity 0.15s;
+            
+            }
+            .subscribe-button:hover{
+                opacity: 0.8;
+            }
+            .subscribe-button:active{
+                opacity: 0.5;
+            }
+           
+            .join-button{
+                color: blue;
+                /*height: 35px; width: 65px; padding is preferable*/
+                padding-left: 15px;
+                padding-right: 15px;
+                padding-top: 9px;
+                padding-bottom: 9px;
+                background-color: white;
+                border-color: rgb(57, 57, 224);
+                border-style: solid;
+                border-width: 1px;
+                border-radius: 2px;
+                cursor: pointer;
+                margin-left:8px;
+                transition: background-color 0.15s, transform 0.15s, color 0.15s; 
+            }
+            .join-button:hover{
+                background-color: rgb(57, 57, 224) ;
+                color: white;
+                
+            }
+            .join-button:active{
+                opacity:0.7;
+                transform: scale(1.2);
+                
+            }
+        
+            .twit{
+                color: white;
+                background-color: rgb(61, 61, 224);
+                
+                padding-left: 15px;
+                padding-right: 15px;
+                padding-top: 9px;
+                padding-bottom: 9px;
+                border-radius: 18px;
+                font-weight: bold;
+                font-size: 15px;
+                border: none;
+                cursor: pointer;
+                margin-left: 8px;
+                transition: box-shadow 0.15s;
+            }
+            .twit:hover {
+                box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.15);
+                /* first value sets shadow to right, 2nd to below and 3rd blurs it. The a in rgba sets the opacity of the color*/
+                /* give tweet button a class for hover to apply specifically to it*/
+            }
+            
+            .bootstrap-button{
+                color: white;
+                background-color: rgb(85, 14, 78);
+                height: 35px;
+                width: 112px;
+                border-radius: 2px;
+                margin-left: 8px;
+                cursor: pointer;
+                border: none;
+                
+            }
+
+            .bootstrap-button2{
+                color: black;
+                height: 35px;
+                width: 100px;
+                cursor: pointer;
+                border-radius: 2px;
+                background-color: white;
+                border-color: black;
+                border-style: solid;
+                border-width: 1px;
+                margin-left: 4px;
+            }
+
+            img{
+                width: 600px;
+                height: 450px;
+                border-radius: 3px;
+            }
+
+            body{
+                font-family: Georgia; 
+                font-size: 20px ;
+                
+            }
+
+            .submit-button {
+                background-color: rgb(3, 119, 3);
+                color: white;
+                border: none;
+                height: 45px;
+                width: 110px;
+                border-radius: 2px;
+                cursor: pointer;
+                font-size: 20px;
+                font-weight: bold;
+                
+            }
+            .cart-button{
+                color: black;
+                background-color: rgb(236, 240, 17);
+                height: 35px;
+                width: 160px;
+                border-radius: 18px;
+                font-weight: bold;
+                font-size: 15px;
+                border: none;
+                cursor: pointer;
+                margin-left: 8px;
+                vertical-align: top;
+            }
+            .wishlist-button{
+                color: black;
+                background-color: white;
+                height: 35px;
+                width: 140px;
+                border-radius: 18px;
+                font-weight: bold;
+                font-size: 15px;
+                border-color: black ;
+                cursor: pointer;
+                margin-left: 8px;
+                border-style: solid ;
+            }
+            .wishlist-button:hover{
+                background-color: gray;
+            }
+            .wishlist-button:active{
+                background-color: rgb(197, 197, 145);
+            }
+            .signup-button{
+                color: white;
+                background-color: rgb(46, 164, 79);
+                border-radius: 5px;
+                padding-left: 1em;
+                padding-right: 1em;
+                padding-top: 0.7em;
+                padding-bottom: 0.7em;
+                margin-right: 8px;
+                margin-left: 8px;
+                font-size: 15px;
+                border-style: solid;
+                font-weight: bold;
+                cursor: pointer;
+                border: none;
+
+            }
+            .signup-button:hover{
+                opacity: 0.9;
+
+            }
+            .signup-button:active {
+                transform: translateY(3px);
+            }
+            
+            .login-button{
+                color: white;
+                background-color: black;
+                border-radius: 5px;
+                padding-left: 1.4em;
+                padding-right: 1.4em;
+                padding-top: 0.7em;
+                padding-bottom: 0.7em;
+                margin-right: 8px;
+                font-size: 15px;
+                border-style: solid;
+                font-weight: bold;
+                cursor: pointer;
+                border: none;
+                transition: background-color 0.15s, color 0.15s; 
+
+            }
+            .login-button:hover{
+                background-color: gray;
+                color: black;
+            }
+            .login-button:active{
+                transform: translate(2px);
+                color: white;
+                background-color: black;
+            }
+        .pagination {
+            display: inline-block;
+            cursor: pointer;
+            vertical-align: top;
+        }
+        .pagination a {
+            color: black;
+            /*float: left;*/
+            padding: 4px 8px;
+            text-decoration: none;
+        }
+        .pagination a.active{
+        
+            background-color: rgb(2, 2, 65);
+            color: white;
+            border-radius: 4px;
+        }
+        .pagination a:hover:not(.active) {
+            background-color: gray;
+            color: black;
+            border-radius: 4px;
+        }
+        .back{
+            cursor: pointer;
+        }
+
+
+        </style>
+    </head>
+    <body>
+        <h1 style='color:blue' font-size="2px">Buttons</h1><br>
+        <img src="../images/new.jpg" download >
+        <p style="margin-left:110px"><strong> Drawing up plans for your website</strong></p><br>
+        <P>We will involve you in the planning of your website here. There are different types of
+             buttons to give your website that aesthetic feel.<br>
+            Please scroll down to choose your preferred button style and tick against the boxes of buttons 
+            that appeal to you.<br>
+             When you are satisfied with your choices, you can click on the submit button below.</p><br>
+        <p> <label class='container'><input type="checkbox"> <span class="checkmark"></span></label>
+            Youtube Button Style <button class="subscribe-button">SUBSCRIBE</button></p><br>
+        <p> <label class='container'><input type="checkbox"> <span class="checkmark"></span></label>
+            Join Button Style  <button class="join-button">JOIN</button></p><br>
+        <p> <label class='container'> <input type="checkbox"> <span class="checkmark"></span></label>
+            Tweet Button Style<button class="twit">Tweet</button></p><br>
+        <p><label class='container'> <input type="checkbox"> <span class="checkmark"></span></label>
+             Bootstrap Button Style  <button class='bootstrap-button'>Get Started</button>
+            <button class='bootstrap-button2'> Download</button></p><br>
+        <p><label class='container'> <input type="checkbox"> <span class="checkmark"></span></label>
+            Add to Cart Button Style  <button class='cart-button'>Add to Cart</button>
+            <button class='wishlist-button'> Add to wishlist</button></p><br>
+        <p><label class='container'> <input type="checkbox"> <span class="checkmark"></span></label>
+            Login Style  <button class='signup-button'>Sign up</button>
+            <button class='login-button'> Log In</button></p><br>
+        <p><label class='container'> <input type="checkbox"> <span class="checkmark"></span></label>
+            Rounded Active and Hover Buttons<br>  
+            <div class='pagination'>
+                <a href="#">&laquo;</a>
+                <button class='back'>Back</button>
+                <a href="#">1</a>
+                <a href="#" class="active">2</a>
+                <a href="#">3</a>
+                <a href="#">4</a>
+                <a href="#">5</a>
+                <button class='next'>Next</button>
+                <a href="#">&raquo;</a>
+            </div></p><br>
+        
+    
+    
+
+        <p style='text-align:center'><a href="buttonresponse.html">
+            <button class="submit-button">Submit</button></a>
+        </p>
+
+
+
+
+    </body>    
+           
+</html>
+
