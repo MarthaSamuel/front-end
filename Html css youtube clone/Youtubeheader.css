@@ -1,0 +1,208 @@
+
+.header{
+    height: 65px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: white;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: rgb(240, 238, 238);
+    z-index: 100;
+
+}
+.left-section{
+    /*background-color: lightblue;*/
+    
+    display: flex;
+    align-items: center;
+    
+}
+.middle-section{
+    /*background-color: lightpink;*/
+    flex: 1;
+    margin-left: 70px;
+    margin-right: 35px;
+    max-width: 600px;
+    display: flex;
+    align-items: center;
+}
+.search-bar{
+    flex: 1;
+    height: 34px;
+    padding-left: 10px;
+    font-size: 16px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(184, 184, 184);
+    border-radius: 2px;
+    box-shadow: inset 1px 2px 3px rgba(0, 0, 0, 0.05);
+    width: 0;
+    cursor: pointer;
+    /*-size: 20px;
+    margin-left: 12px;
+    /*display: block; because we have div*/
+}
+
+.searchbar::placeholder{
+    font-family: Roboto, Arial;
+    font-size: 16px;  
+
+}
+.hamburger-menu{
+    height: 24px;
+    margin-left: 27px;
+    margin-right: 24px;
+    cursor: pointer;
+}
+.youtube-logo{
+    height: 24px;
+    cursor: pointer;
+}
+.search-button{
+    height: 38px;
+    width: 66px;
+    background-color: rgb(240, 240, 240);
+    border-width: 1px;
+    border-style: solid;
+    border-color:rgb(184, 184, 184);/* shorthand- border: 1px solid rgb(184, 184, 184)*/
+    margin-left: -1px;
+    margin-right: 10px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+
+
+    position: relative;
+} 
+
+.search-button .tooltip{ /*targets tooltip inside search-button*/
+    position: absolute;
+    background-color: gray;
+    color: white;
+    padding-top: 4px;
+    padding-right: 8px;
+    padding-left: 8px;
+    padding-bottom: 4px;
+    border-radius: 2px;
+    font-size: 9px;
+    bottom: -30px;
+    opacity: 0;
+    transition: opacity 0.15s;
+    pointer-events: none; /* to make hover active on only search button exclufing surroundings*/
+}
+
+.search-button:hover .tooltip{/*targets tooltip only when we are hovering over search-button*/
+    opacity: 1;
+}
+.searchicon{
+    height:25px;
+    /*margin-top: 4px;*/
+}
+
+.search-button,
+.voicesearch-button,
+.uploadicon-container,
+.notification-container,
+.Youtubeapps-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.voicesearch-button{
+    height: 40px;
+    width: 60px;
+    border-radius: 20px;
+    border: none;
+    background-color: rgb(245, 245, 245);
+    cursor: pointer;
+    
+} 
+
+
+.voicesearch-button .tooltip,
+.uploadicon-container .tooltip,
+.Youtubeapps-container .tooltip,
+.notification-container .tooltip{
+    font-family: Roboto, Arial; 
+    position: absolute;
+    background-color: gray;
+    color: white;
+    padding-top: 4px;
+    padding-right: 8px;
+    padding-left: 8px;
+    padding-bottom: 4px;
+    border-radius: 2px;
+    font-size: 9px;
+    bottom: -30px;
+    opacity: 0;
+    transition: opacity 0.15s;
+    pointer-events: none; 
+    white-space: nowrap;
+}
+.voicesearch-button:hover .tooltip,
+.uploadicon-container:hover .tooltip,
+.notification-container:hover .tooltip,
+.Youtubeapps-container:hover .tooltip{
+    opacity: 1;
+}
+.voicesearch-icon{
+    height: 24px;
+    /*margin-top: 4px; */ 
+
+}
+.right-section{
+   /* background-color: lightblue;*/
+    width: 190px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-right: 20px;
+    flex-shrink: 0;
+}
+.uploadicon{
+    height: 24px;
+    cursor: pointer;
+
+}
+.youtubeappsicon{
+    height: 24px;
+    cursor: pointer;
+
+}
+.notificationsicon{
+    height: 24px;
+    cursor: pointer;
+
+}
+.notificationiconcontainer{
+    position: relative;
+}
+.notificationcount{
+    position: absolute;
+    background-color: rgb(197, 5, 5);
+    color: white;
+    top: -5px;
+    right: -5px;
+    font-family: Roboto, Arial;
+    font-size: 11px;
+    padding-left: 7px;
+    padding-right: 7px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    border-radius: 10px;
+    
+}
+.currentuserpic{
+    height: 32px;
+    border-radius: 16px;
+    cursor: pointer;
+
+}
